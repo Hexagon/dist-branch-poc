@@ -22,6 +22,7 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: git switch -c release
+    - run: git branch --set-upstream-to=origin/release release
     - run: git stash
     - run: git pull
     - run: git checkout stash -- .
