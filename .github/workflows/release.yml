@@ -21,10 +21,8 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build
-    - run: git switch -c release
-    - run: git branch --set-upstream-to=origin/release release
     - run: git stash
-    - run: git pull
+    - run: git switch -c release
     - run: git checkout stash -- .
     - run: git config --global user.email "bot@56k.guru"
     - run: git config --global user.name "Release Bot"
