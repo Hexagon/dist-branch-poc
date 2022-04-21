@@ -1,0 +1,30 @@
+{
+  "name": "dist-branch-poc",
+  "version": "0.0.1",
+  "description": "Exploring the concept of putting build/dist files in a separate branch using GitHub actions",
+  "author": "Hexagon <github.com/hexagon>",
+  "homepage": "https://github.com/hexagon/dist-branch-poc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hexagon/dist-branch-poc"
+  },
+  "bugs": {
+    "url": "https://github.com/hexagon/dist-branch-poc/issues"
+  },
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "keywords": [],
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "type": "module",
+  "main": "./dist/poc.cjs",
+  "browser": "./dist/poc.umd.js",
+  "module": "./src/poc.js",
+  "devDependencies": {
+    "rollup": "^2.59.0"
+  },
+  "license": "MIT"
+}
