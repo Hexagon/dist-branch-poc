@@ -22,8 +22,7 @@ jobs:
     - run: git config --global user.email "bot@56k.guru"
     - run: git config --global user.name "Release Bot"
     - run: git checkout -B release
-    - run: git branch --set-upstream-to=origin/release release
-    - run: git pull
+    - run: git fetch
     - run: git checkout main
     - run: npm ci
     - run: npm run build
