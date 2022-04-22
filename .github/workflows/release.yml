@@ -21,12 +21,9 @@ jobs:
         cache: 'npm'
     - run: git config --global user.email "bot@56k.guru"
     - run: git config --global user.name "Release Bot"
-    - run: git switch -c release
-    - run: git fetch
-    - run: git checkout main
     - run: npm ci
     - run: npm run build
-    - run: git switch -c release
+    - run: git checkout -B release
     - run: cp .gitignore.release .gitignore
     - run: git add .
     - run: git commit -m "Release"
