@@ -23,7 +23,7 @@ jobs:
     - run: git config --global user.name "Release Bot"
     - run: git checkout -B release
     - run: git fetch
-    - run: git pull
+    - run: git pull origin release
     - run: git checkout main
     - run: npm ci
     - run: npm run build
